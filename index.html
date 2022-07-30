@@ -26,7 +26,7 @@
         <nav class="main-nav">
           <ul class="site-nav list">
             <li class="current site-nav-item">
-              <a href="./index.html" class="link current">Студия</a>
+              <a href="./index.html" class="link-current">Студия</a>
             </li>
 
             <li><a href="./portfolio.html" class="link">Портфолио </a></li>
@@ -58,7 +58,16 @@
       <!-- Герой -->
       <section class="hero">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button class="button">Заказать услугу</button>
+        <button class="button" data-modal-open>Заказать услугу</button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="button-modal-close" data-modal-close>
+              <svg class="close-modal-svg" width="11" height="11">
+                <use href="./images/symbol-defs.svg#icon-crest"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </section>
 
       <section class="features">
@@ -98,6 +107,7 @@
 
           <ul class="work-list">
             <li class="work-item">
+              <p class="work-subtitle">Десктопные приложения</p>
               <img
                 src="./images/img.png"
                 alt="Человек печатает на клавиатуре"
@@ -106,6 +116,7 @@
               />
             </li>
             <li class="work-item">
+              <p class="work-subtitle">Мобильные приложения</p>
               <img
                 src="./images/box2.png"
                 alt="Человек с телефоном в руках смотрит на другие телефоны"
@@ -114,6 +125,7 @@
               />
             </li>
             <li class="work-item">
+              <p class="work-subtitle">Дизайнерские решения</p>
               <img
                 src="./images/box3.png"
                 alt="Человек с планшетом в руках"
@@ -356,5 +368,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
